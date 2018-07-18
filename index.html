@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice3</title>
+  </head>
+  <style media="screen">
+  html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+  #car { border: 1px solid black; margin: 15% auto; background-color: white;}
+  </style>
+  <body>
+    <canvas id="car" width="400px" height="400px"></canvas>
+
+  <script>
+var c = document.getElementById('car');
+var ctx = c.getContext("2d");
+ctx.lineWidth = 5;
+//roue de la voiture
+ctx.beginPath();
+ctx.arc(300,240,30,0,Math.PI*2,true);
+ctx.strokeStyle = '#cdcdcd';
+ctx.fillStyle = "cdcdcd";
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(100,240,30,0,Math.PI*2,true);
+ctx.strokeStyle = '#Black';
+ctx.fillStyle = "cdcdcd";
+ctx.fill();
+ctx.stroke();
+//strcture de la voiture
+ctx.fillStyle ='green';
+ctx.fillRect(50,130,300,80);
+//toit de la voiture
+ctx.fillStyle ='green';
+ctx.fillRect(110,80,180,50);
+</script>
+</body>
+</html>
